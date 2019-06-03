@@ -1,5 +1,6 @@
 require 'data_mapper'
 require 'sinatra/base'
+require_relative 'lib/sign_up'
 require_relative 'lib/database_connection_setup'
 
 class MakersBnB < Sinatra::Base
