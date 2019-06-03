@@ -20,4 +20,16 @@ class MakersBnB < Sinatra::Base
     redirect '/'
   end
 
+  get '/spaces/new' do
+    erb :"/spaces/new"
+  end
+
+  post '/spaces' do
+    redirect '/spaces'
+  end
+
+  get '/spaces' do
+    erb :spaces
+  end
+
 end
