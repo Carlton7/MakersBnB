@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'datamapper'
+gem 'dm-postgres-adapter'
 gem 'sinatra'
 
 group :test do
