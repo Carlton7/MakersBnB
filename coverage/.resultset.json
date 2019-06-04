@@ -1,12 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/yems/BBB/MakersBnB/spec/features/list_space_spec.rb": [
-=======
-      "/Users/student/makers/projects/week6/MakersBnB/spec/Features/list_space_spec.rb": [
->>>>>>> 6da86409c952c6ad425cccf32eba89344f6e379a
         1,
         1,
         1,
@@ -20,16 +15,7 @@
         null,
         null
       ],
-<<<<<<< HEAD
       "/Users/yems/BBB/MakersBnB/spec/features/sign_up_spec.rb": [
-=======
-      "/Users/student/makers/projects/week6/MakersBnB/spec/Features/sign_up_spec.rb": [
->>>>>>> 8214c6170c5bc8b4cfe533f213b1ca7945b1c64f
-=======
-=======
->>>>>>> 8214c6170c5bc8b4cfe533f213b1ca7945b1c64f
-      "/Users/student/makers/projects/week6/MakersBnB/spec/Features/sign_up_spec.rb": [
->>>>>>> 6da86409c952c6ad425cccf32eba89344f6e379a
         1,
         null,
         1,
@@ -46,53 +32,42 @@
         null,
         null
       ],
-<<<<<<< HEAD
-<<<<<<< HEAD
       "/Users/yems/BBB/MakersBnB/spec/homepage_spec.rb": [
-=======
-      "/Users/student/makers/projects/week6/MakersBnB/spec/homepage_spec.rb": [
->>>>>>> 8214c6170c5bc8b4cfe533f213b1ca7945b1c64f
-=======
-      "/Users/student/makers/projects/week6/MakersBnB/spec/homepage_spec.rb": [
->>>>>>> 6da86409c952c6ad425cccf32eba89344f6e379a
 
       ],
-      "/Users/student/makers/projects/week6/MakersBnB/spec/users_spec.rb": [
-<<<<<<< HEAD
+      "/Users/yems/BBB/MakersBnB/spec/spaces_spec.rb": [
         1,
         1,
         1,
         1,
-=======
->>>>>>> 8214c6170c5bc8b4cfe533f213b1ca7945b1c64f
         null,
         null,
         null,
         null,
         null,
-<<<<<<< HEAD
+        null,
+        null,
         1,
         1,
-=======
+        null,
+        null
+      ],
+      "/Users/yems/BBB/MakersBnB/spec/users_spec.rb": [
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
         null,
         null,
-        null,
->>>>>>> 8214c6170c5bc8b4cfe533f213b1ca7945b1c64f
+        1,
+        1,
         null,
         null
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "timestamp": 1559643806
-=======
-    "timestamp": 1559650203
->>>>>>> 6da86409c952c6ad425cccf32eba89344f6e379a
-=======
-    "timestamp": 1559644216
->>>>>>> 8214c6170c5bc8b4cfe533f213b1ca7945b1c64f
+    "timestamp": 1559658894
   }
 }

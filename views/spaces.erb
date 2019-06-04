@@ -1,10 +1,9 @@
-Lakeside Cabin
-Romantic getaway in the magical forest
-£200
-04/07/2019
-19/07/2019
+<%=@space.each do |space|%>
+<li>
+<%=space.name%>, <%=space.description%>
+</li>
+<%end%>
 
-
- <form action='/' method='get'>
+<form action='/' method='get'>
       <input type='submit' value='home' />
 </form>

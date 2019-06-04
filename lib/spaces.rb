@@ -7,9 +7,9 @@ class Space
   property :id, Serial
   property :name, String, required: true, unique: true
   property :description, String, required: true
-  property :price, String, required: true
-  property :available_from, String, required: true
-  property :available_to, String, required: true
+  property :price, Integer, required: true
+  property :available_from, Date, required: true
+  property :available_to, Date, required: true
 
 end
 
