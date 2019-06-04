@@ -1,6 +1,20 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/yems/BBB/MakersBnB/spec/features/list_space_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/yems/BBB/MakersBnB/spec/features/sign_up_spec.rb": [
         1,
         null,
@@ -22,6 +36,6 @@
 
       ]
     },
-    "timestamp": 1559641667
+    "timestamp": 1559643806
   }
 }

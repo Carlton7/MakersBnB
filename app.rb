@@ -1,7 +1,9 @@
 require 'data_mapper'
 require 'sinatra/base'
+require_relative 'lib/spaces'
 require_relative 'lib/sign_up'
 require_relative 'lib/database_connection_setup'
+
 
 class MakersBnB < Sinatra::Base
   enable :sessions
@@ -25,6 +27,8 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/spaces' do
+    space = Space.create(name: params[:name], description: params[:description], price: params[:price], available_from: params[:available_from], available_to: params[:available_to])
+    session[:space] = space
     redirect '/spaces'
   end
 
