@@ -4,7 +4,6 @@ require_relative 'lib/sign_up'
 require_relative 'lib/database_connection_setup'
 
 class MakersBnB < Sinatra::Base
-  enable :sessions
 
   get '/' do
     erb :index
@@ -15,8 +14,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/sign_up' do
-    user = User.create(name: params[:name], email: params[:email], password: params[:password])
-    session[:user] = user
+    User.create(name: params[:name], email: params[:email], password: params[:password])
     redirect '/'
   end
 
