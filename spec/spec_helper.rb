@@ -8,6 +8,7 @@ require_relative '../app'
 require 'set_up_test_database'
 require 'capybara/rspec'
 
+
 # tell Capybara about our app class
 Capybara.app = MakersBnB
 
@@ -34,6 +35,7 @@ SimpleCov.start
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 RSpec.configure do |config|
   config.before(:each) do
     setup_test_db

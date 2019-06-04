@@ -8,4 +8,3 @@ end
 
 DataMapper.auto_upgrade!
 DataMapper.finalize
-
