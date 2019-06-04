@@ -5,8 +5,9 @@ require 'simplecov'
 require 'simplecov-console'
 # require our Sinatra app file
 require_relative '../app'
-# require 'features/setup_test_db'
+require 'set_up_test_database'
 require 'capybara/rspec'
+
 
 # tell Capybara about our app class
 Capybara.app = MakersBnB
@@ -34,10 +35,12 @@ SimpleCov.start
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
 RSpec.configure do |config|
-  # rspec-expectations config goes here. You can use an alternate
-  # assertion/expectation library such as wrong or the stdlib/minitest
-  # assertions if you prefer.
+ config.before(:each) do
+  setup_test_db
+ end 
+
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
