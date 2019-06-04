@@ -6,7 +6,6 @@ require_relative 'lib/database_connection_setup'
 
 
 class MakersBnB < Sinatra::Base
-  enable :sessions
 
   get '/' do
     erb :index
@@ -17,8 +16,7 @@ class MakersBnB < Sinatra::Base
   end
 
   post '/sign_up' do
-    user = User.create(name: params[:name], email: params[:email], password: params[:password])
-    session[:user] = user
+    User.create(name: params[:name], email: params[:email], password: params[:password])
     redirect '/'
   end
 
@@ -26,8 +24,8 @@ class MakersBnB < Sinatra::Base
     erb :'/spaces/new'
   end
 
-  post '/spaces' do
-    space = Space.create(name: params[:name], description: params[:description]\
+  post '/spaces/new' do
+    Space.create(name: params[:name], description: params[:description]\
     , price: params[:price], available_from: params[:available_from]\
     , available_to: params[:available_to])
     redirect '/spaces'
@@ -38,3 +36,5 @@ class MakersBnB < Sinatra::Base
   end
 
 end
+
+

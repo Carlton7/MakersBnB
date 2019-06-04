@@ -6,5 +6,6 @@ else
     DataMapper.setup(:default, 'postgres://:@localhost/makersbnb')
 end
 
-DataMapper.finalize
 DataMapper.auto_upgrade!
+DataMapper.finalize
+

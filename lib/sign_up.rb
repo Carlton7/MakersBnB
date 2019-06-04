@@ -10,3 +10,5 @@ class User
   property :password, String, required: true
 
 end
+
+
