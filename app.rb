@@ -1,7 +1,7 @@
 require 'data_mapper'
 require 'sinatra/base'
 require_relative 'lib/spaces'
-require_relative 'lib/sign_up'
+require_relative 'lib/users'
 require_relative 'lib/database_connection_setup'
 
 
@@ -32,6 +32,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces' do
+    @spaces = Space.all
     erb :spaces
   end
 

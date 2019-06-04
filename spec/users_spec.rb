@@ -1,4 +1,4 @@
-require_relative '../lib/sign_up'
+require_relative '../lib/users'
 describe 'Users' do
   it 'can create a user' do
     user = User.create(
