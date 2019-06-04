@@ -24,8 +24,8 @@ class MakersBnB < Sinatra::Base
     erb :'/spaces/new'
   end
 
-  post '/spaces' do
-    space = Space.create(name: params[:name], description: params[:description]\
+  post '/spaces/new' do
+    Space.create(name: params[:name], description: params[:description]\
     , price: params[:price], available_from: params[:available_from]\
     , available_to: params[:available_to])
     redirect '/spaces'
@@ -36,3 +36,5 @@ class MakersBnB < Sinatra::Base
   end
 
 end
+
+

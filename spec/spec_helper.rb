@@ -37,10 +37,9 @@ SimpleCov.start
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
 RSpec.configure do |config|
- config.before(:each) do
-  setup_test_db
- end 
-
+  config.before(:each) do
+    setup_test_db
+   end 
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
