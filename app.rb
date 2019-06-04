@@ -21,7 +21,7 @@ class MakersBnB < Sinatra::Base
   end
 
   get '/spaces/new' do
-    erb :"/spaces/new"
+    erb :'/spaces/new'
   end
 
   post '/spaces' do

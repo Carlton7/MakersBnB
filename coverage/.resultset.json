@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/lucybarber/Documents/Makers/Weekly_challenges/MakersBnB/spec/features/sign_up_spec.rb": [
+      "/Users/yems/BBB/MakersBnB/spec/features/sign_up_spec.rb": [
         1,
         null,
         1,
@@ -18,10 +18,10 @@
         null,
         null
       ],
-      "/Users/lucybarber/Documents/Makers/Weekly_challenges/MakersBnB/spec/homepage_spec.rb": [
+      "/Users/yems/BBB/MakersBnB/spec/homepage_spec.rb": [
 
       ]
     },
-    "timestamp": 1559568450
+    "timestamp": 1559641667
   }
 }
