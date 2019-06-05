@@ -1,0 +1,16 @@
+ <form action='/bookings/new' method='post'>
+    <input type='date' name='book_from' placeholder='Book from' />
+    <input type='date' name='book_to' placeholder='Book to' />
+    <input type='submit' value='Check availability' />
+  </form>
+
+<%@spaces.each do |space|%>
+<li>
+<%=space.name%> (<%=space.description%>) 
+<form action='/bookings/request'>
+    <input type='submit' value='Book' />
+</form>
+</li>
+<%end%>
+
+

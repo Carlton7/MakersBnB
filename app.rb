@@ -6,6 +6,7 @@ require_relative 'lib/database_connection_setup'
 
 
 class MakersBnB < Sinatra::Base
+ enable :sessions
 
   get '/' do
     erb :index
@@ -36,6 +37,22 @@ class MakersBnB < Sinatra::Base
     erb :spaces
   end
 
+  get '/bookings/new' do
+   @spaces = Space.all
+   @book_from = session[:book_from]
+   @book_to = session[:book_to]
+   erb :'/bookings/new'
+  end
+
+  post '/bookings/new' do
+    session[:book_from] = params[:book_from]
+    session[:book_to] = params[:book_to]
+    redirect '/bookings/new'
+  end
+
+  get '/bookings/request' do
+    erb :'bookings/request'
+  end
 end
 
 
