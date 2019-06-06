@@ -1,0 +1,15 @@
+<%= @user_name  %>
+<%# <form action='/sign_up'>
+  <input type='submit' value='Sign up'/>
+</form>
+<form action='/log_in'>
+  <input type='submit' value='Log in'/>
+</form> %>
+<%@spaces.each do |space|%>
+<li>
+<%=space.name%> (<%=space.description%>)
+<form action='/bookings/request/<%=space.id%>'>
+    <input type='submit' value='Book' />
+</form>
+</li>
+<%end%>

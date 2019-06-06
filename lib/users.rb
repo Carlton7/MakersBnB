@@ -9,6 +9,6 @@ class User
   property :email, String, required: true, unique: true
   property :password, String, required: true
 
+  # has n, :bookings
+
 end
-
-

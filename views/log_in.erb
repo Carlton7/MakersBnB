@@ -1,0 +1,19 @@
+<h1> Log in </h1>
+
+<% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+
+<form action='/log_in' method='post'>
+  <div>
+  <input type='email' name='email' placeholder='Enter email....'/>
+  </div>
+  <div>
+  <input type='password' name='password' placeholder='Enter password....'/>
+  </div>
+  <div>
+  <input type='submit' value='Log in'/>
+  </form>
