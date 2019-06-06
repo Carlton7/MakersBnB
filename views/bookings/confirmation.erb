@@ -1,6 +1,9 @@
-<%if @range.cover?(@booking_date)%>
+<%if @range.cover?(@booking_date) && @confirmation.status != "Approved"%>
      Available Booked
     <%else%>
      'Not available'
     <%end%>
 
+ <form action='/profile' method='get'>
+      <input type='submit' value='View Profile' />
+</form>

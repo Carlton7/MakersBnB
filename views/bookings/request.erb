@@ -1,5 +1,12 @@
 Please select a date:
 
+<% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
+
  <form action='/bookings/request' method='post'>
     <input type='date' name='booking_date'/>
     <input type='submit' value='Request booking' />
@@ -8,3 +15,5 @@ Please select a date:
  <form action='/index2' method='get'>
       <input type='submit' value='home' />
 </form>
+
+

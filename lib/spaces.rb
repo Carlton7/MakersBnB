@@ -4,7 +4,7 @@ require 'dm-postgres-adapter'
 class Space
   include DataMapper::Resource
 
-# has n, :bookings
+has n, :bookings
 
   property :id, Serial
   property :name, String, required: true, unique: true

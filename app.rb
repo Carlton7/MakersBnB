@@ -63,6 +63,28 @@ class MakersBnB < Sinatra::Base
     erb :index2
   end
 
+  get '/profile' do
+    @user_name = session[:user_name]
+    # @allbookings = Booking.all
+    @bookings = Booking.all(:user_id => session[:user_id])
+    @spaces = Space.all(:user_id => session[:user_id])
+    @requests = Booking.all(:requester => session[:user_id])
+    session[:booking_id]= params[:id]
+    erb :profile
+  end
+
+  post '/profile-approve' do 
+    @booking_status = Booking.first(session[:booking_id])
+    @booking_status.update(:status => 'Approved')
+    redirect '/profile'
+  end
+
+  post '/profile-reject' do 
+    @booking_status = Booking.first(session[:booking_id])
+    @booking_status.destroy
+    redirect '/profile'
+  end
+
   get '/bookings/new' do
    @spaces = Space.all
    @book_from = session[:book_from]
@@ -85,9 +107,18 @@ class MakersBnB < Sinatra::Base
    space = Space.first(id: session[:space_id])
    @space_user_id = space.user_id
    @space_id = space.id
-   Booking.create(start: params[:booking_date], end: params[:booking_date], user_id: @space_user_id, space_id: @space_id, requester: session[:user_id])
+   @space_name = space.name
    session[:date] = params[:booking_date]
-   redirect '/bookings/confirmation'
+    if
+      @book = Booking.first(:space_id => @space_id, :start => session[:date]) 
+      if @book.space_id == @space_id && @book.start == session[:date]
+         flash[:error] = "Date unavailable"
+      end 
+    else
+      Booking.create(start: params[:booking_date], end: params[:booking_date], user_id: @space_user_id, space_id: @space_id, space_name: @space_name,  requester: session[:user_id])
+      redirect '/bookings/confirmation'
+    end
+
   end
 
   get '/bookings/confirmation' do
@@ -96,6 +127,9 @@ class MakersBnB < Sinatra::Base
     @found = Space.get(session[:space_id])
     @range = @found.available_from..@found.available_to
     p @range
+    @confirmation = Booking.first(:space_id => session[:space_id], :start => session[:date])
+    p @confirmation
+
     erb :'/bookings/confirmation'
   end
 end

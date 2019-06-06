@@ -1,0 +1,39 @@
+Hi <%= @user_name  %>!
+
+Spaces to approve
+
+<%@bookings.each do |booking|%>
+<li>
+<%=booking.space_name%> 
+  <% if booking.status == 'Approved' %>
+    Approved from:(<%=booking.start%>)to:(<%=booking.end%>) 
+  <%else %>
+    Requested from:(<%=booking.start%>)to:(<%=booking.end%>) 
+  <%end%>
+  <% if booking.status != 'Approved' %>
+    <form action='/profile-approve' method='post'>
+        <input type='submit' value='Approve' />
+    </form>
+    <form action='/profile-reject' method='post'>
+        <input type='submit' value='Reject' />
+    </form>
+  <%end%>
+</li>
+<%end%>
+
+Your Spaces
+
+<%@spaces.each do |space|%>
+<li>
+<%=space.name%> (<%=space.description%>)
+</li>
+<%end%>
+
+
+Your Requests
+
+<%@requests.each do |space|%>
+<li>
+<%=space.space_name%> <%=space.status%> 
+</li>
+<%end%>
