@@ -50,8 +50,23 @@ class MakersBnB < Sinatra::Base
     redirect '/bookings/new'
   end
 
-  get '/bookings/request' do
+  get '/bookings/request/:id' do
+    session[:space_id] = params[:id]
     erb :'bookings/request'
+  end
+
+  post '/bookings/request' do
+    session[:date] = params[:booking_date]
+   redirect '/bookings/confirmation'
+  end
+
+  get '/bookings/confirmation' do
+    @booking_date = session[:date]
+    p @booking_date
+    @found = Space.get(session[:space_id])
+    @range = @found.available_from..@found.available_to
+    p @range
+    erb :'/bookings/confirmation'
   end
 end
 
