@@ -112,7 +112,8 @@ class MakersBnB < Sinatra::Base
     if
       @book = Booking.first(:space_id => @space_id, :start => session[:date]) 
       if @book.space_id == @space_id && @book.start == session[:date]
-         flash[:error] = "Date unavailable"
+        flash[:error] = "Date unavailable"
+        redirect '/bookings/request/:id'
       end 
     else
       Booking.create(start: params[:booking_date], end: params[:booking_date], user_id: @space_user_id, space_id: @space_id, space_name: @space_name,  requester: session[:user_id])
