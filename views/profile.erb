@@ -5,23 +5,24 @@ Spaces to approve
 <%@bookings.each do |booking|%>
 <li>
 <%=booking.space_name%> 
+<br>
   <% if booking.status == 'Approved' %>
     Approved from:(<%=booking.start%>)to:(<%=booking.end%>) 
   <%else %>
     Requested from:(<%=booking.start%>)to:(<%=booking.end%>) 
   <%end%>
-
+<br>
   <% if booking.status != 'Approved' %>
     <form action='/bookings/<%=booking.id%>/approve' method='post'>
         <input type='submit' value='approve' />
     </form>
     <form action='/bookings/<%=booking.id%>/reject' method='post'>
-        <input type='submit' value='reject' />
+        <input type='submit' value='reject'/>
     </form>
   <%end%>
 </li>
 <%end%>
-
+<br>
 Your Spaces
 
 <%@spaces.each do |space|%>
@@ -38,3 +39,7 @@ Your Requests
 <%=space.space_name%> <%=space.status%> 
 </li>
 <%end%>
+
+<form action='/index2'>
+<input type='submit' value="Home"/>
+</form>
