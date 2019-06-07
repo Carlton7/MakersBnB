@@ -14,8 +14,9 @@
         <input type='date' name='book_to' placeholder='Book to' />
         <input type='submit' value='Check availability' />
       </form>
-    <div id='list'
 
+
+    <div id='list'
     <%@spaces.each do |space|%>
     <li>
     <%=space.name%> (<%=space.description%>)
@@ -24,7 +25,6 @@
     </form>
     </li>
     <%end%>
-    
     </div>
 
   </body>

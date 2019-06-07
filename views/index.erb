@@ -5,21 +5,14 @@
 </head>
 
 <body>
-  <form action='/sign_up'>
-    <input type='submit' value='Sign up'/>
-  </form>
 
-  <form action='/log_in'>
-    <input type='submit' value='Sign in'/>
-  </form>
+  <div class="navbar">
+    <a href="/sign_up">Sign up</a>
+    <a href="/log_in">Log in</a>
+    <a href="spaces/new">Host a space</a>
+    <a href="bookings/new">Book a space</a>
+  </div>
 
-  <form action='/spaces/new'>
-  <input type='submit' value="Host a space"/>
-  </form>
-
-  <form action='/bookings/new'>
-  <input type='submit' value="Book a space"/>
-  </form>
 
     <div>
     <% if !@user %>  <h1> Welcome to Makers BnB </h1>
