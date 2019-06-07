@@ -1,18 +1,31 @@
+<html lang='en'>
+<head>
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/vegas/dist/vegas.min.css">
+</head>
+
+<body>
+<div class="loginBox">
 
 <% if !@user %> Welcome to Makers BnB
 
 <% else %> Welcome <%= @user['name'] %>
 
 <% end %>
-
-<form action='/sign_up'>
-  <input type='submit' value='Sign up'/>
-</form>
-
+<br>
+<br>
 <form action='/log_in'>
-  <input type='submit' value='Log in'/>
+  <input type='submit' value='Log in' class="submit"/>
 </form>
+<br>
+<form action='/sign_up'>
+  <input type='submit' value='Sign up' class="submit"/>
+</form>
+</div>
 
-
-
-
+  <script src="/index1.js"></script>
+  <script src="/jquery.js"></script>
+  <script src="/vegas/dist/vegas.min.js"></script>
+</body>
+</html>
