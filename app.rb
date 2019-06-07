@@ -65,23 +65,21 @@ class MakersBnB < Sinatra::Base
 
   get '/profile' do
     @user_name = session[:user_name]
-    # @allbookings = Booking.all
     @bookings = Booking.all(:user_id => session[:user_id])
     @spaces = Space.all(:user_id => session[:user_id])
     @requests = Booking.all(:requester => session[:user_id])
-    session[:booking_id]= params[:id]
     erb :profile
   end
 
-  post '/profile-approve' do 
-    @booking_status = Booking.first(session[:booking_id])
-    @booking_status.update(:status => 'Approved')
+  post '/bookings/:id/approve' do 
+    booking = Booking.get(params[:id])
+    booking.update(status: 'Approved')
     redirect '/profile'
   end
 
-  post '/profile-reject' do 
-    @booking_status = Booking.first(session[:booking_id])
-    @booking_status.destroy
+  post '/bookings/:id/reject' do 
+    booking = Booking.get(params[:id])
+    booking.destroy
     redirect '/profile'
   end
 

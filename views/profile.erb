@@ -10,12 +10,13 @@ Spaces to approve
   <%else %>
     Requested from:(<%=booking.start%>)to:(<%=booking.end%>) 
   <%end%>
+
   <% if booking.status != 'Approved' %>
-    <form action='/profile-approve' method='post'>
-        <input type='submit' value='Approve' />
+    <form action='/bookings/<%=booking.id%>/approve' method='post'>
+        <input type='submit' value='approve' />
     </form>
-    <form action='/profile-reject' method='post'>
-        <input type='submit' value='Reject' />
+    <form action='/bookings/<%=booking.id%>/reject' method='post'>
+        <input type='submit' value='reject' />
     </form>
   <%end%>
 </li>
