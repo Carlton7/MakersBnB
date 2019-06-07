@@ -1,22 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "style.css"/>
+</head>
 
-<% if !@user %> Welcome to Makers BnB
+<body>
+  <form action='/sign_up'>
+    <input type='submit' value='Sign up'/>
+  </form>
 
-<% else %> Welcome <%= @user['name'] %>
+  <form action='/log_in'>
+    <input type='submit' value='Sign in'/>
+  </form>
 
-<% end %>
+  <form action='/spaces/new'>
+  <input type='submit' value="Host a space"/>
+  </form>
 
-<form action='/sign_up'>
-  <input type='submit' value='Sign up'/>
-</form>
+  <form action='/bookings/new'>
+  <input type='submit' value="Book a space"/>
+  </form>
 
-<form action='/log_in'>
-  <input type='submit' value='Log in'/>
-</form>
+    <div>
+    <% if !@user %>  <h1> Welcome to Makers BnB </h1>
 
-<form action='/spaces/new'>
-<input type='submit' value="Host a space"/>
-</form>
+    <% else %> <h1> Welcome <%= @user['name'] %>  </h1>
 
-<form action='/bookings/new'>
-<input type='submit' value="Book a space"/>
-</form>
+    <% end %>
+    </div>
+  </body>
+  </html>

@@ -1,16 +1,31 @@
- <form action='/bookings/new' method='post'>
-    <input type='date' name='book_from' placeholder='Book from' />
-    <input type='date' name='book_to' placeholder='Book to' />
-    <input type='submit' value='Check availability' />
-  </form>
+<!doctype html>
+  <html>
+  <head>
+    <link rel = "stylesheet" type = "text/css" href = "../style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <form action='/' method='get'>
+         <button class="btn"><i class="fa fa-home"></i></button>
+    </form>
+    </head>
 
-<%@spaces.each do |space|%>
-<li>
-<%=space.name%> (<%=space.description%>)
-<form action='/bookings/request/<%=space.id%>'>
-    <input type='submit' value='Book' />
-</form>
-</li>
-<%end%>
+    <body>
+     <form action='/bookings/new' method='post'>
+        <input type='date' name='book_from' placeholder='Book from' />
+        <input type='date' name='book_to' placeholder='Book to' />
+        <input type='submit' value='Check availability' />
+      </form>
+    <div id='list'
 
+    <%@spaces.each do |space|%>
+    <li>
+    <%=space.name%> (<%=space.description%>)
+    <form action='/bookings/request/<%=space.id%>'>
+        <input type='submit' value='Book' />
+    </form>
+    </li>
+    <%end%>
+    
+    </div>
 
+  </body>
+  </html>

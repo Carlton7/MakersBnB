@@ -1,19 +1,34 @@
-<h1> Log in </h1>
+<!doctype html>
+  <html>
+  <head>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <form action='/' method='get'>
+         <button class="btn"><i class="fa fa-home"></i></button>
+    </form>
+    </head>
 
-<% flash.keys.each do |type| %>
-  <div data-alert class="flash <%= type %> alert-box radius">
-    <%= flash[type] %>
-    <a href="#" class="close">&times;</a>
-  </div>
-<% end %>
+    <body>
 
-<form action='/log_in' method='post'>
-  <div>
-  <input type='email' name='email' placeholder='Enter email....'/>
-  </div>
-  <div>
-  <input type='password' name='password' placeholder='Enter password....'/>
-  </div>
-  <div>
-  <input type='submit' value='Log in'/>
-  </form>
+      <h2> Log in </h2>
+
+      <% flash.keys.each do |type| %>
+        <div data-alert class="flash <%= type %> alert-box radius">
+          <%= flash[type] %>
+          <a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+
+      <form action='/log_in' method='post'>
+        <div>
+        <input type='email' name='email' placeholder='Enter email....'/>
+        </div>
+        <div>
+        <input type='password' name='password' placeholder='Enter password....'/>
+        </div>
+        <div>
+        <input type='submit' value='Log in'/>
+        </form>
+
+        </body>
+          </html>

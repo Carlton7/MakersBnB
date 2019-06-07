@@ -1,9 +1,24 @@
-<% @spaces.each do |space|%>
-<li>
-<%=space.name%> (<%=space.description%>)
-</li>
-<%end%>
+<!doctype html>
+  <html>
+  <head>
+    <link rel = "stylesheet" type = "text/css" href = "style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <form action='/' method='get'>
+         <button class="btn"><i class="fa fa-home"></i></button>
+    </form>
+    </head>
 
- <form action='/' method='get'>
-      <input type='submit' value='home' />
-</form>
+    <body>
+
+      <% @spaces.each do |space|%>
+      <li>
+      <%=space.name%> (<%=space.description%>)
+      </li>
+      <%end%>
+
+       <form action='/' method='get'>
+            <input type='submit' value='home' />
+      </form>
+
+      </body>
+      </html>
