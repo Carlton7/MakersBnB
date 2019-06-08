@@ -22,7 +22,7 @@ body {
 .submit {
   background-color: #bbb;
   padding: .5em;
-  font-family: 'Bookman', sans-serif; 
+  font-family: 'Bookman', sans-serif;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 6px;
@@ -31,14 +31,3 @@ body {
   text-decoration: none;
   border: none;
  }
-
-/* body {
-  font-family: 'Ubuntu', sans-serif;
-	text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-size: 14px;
-  line-height: 1.43;
-  color: #484848;
-  -moz-osx-font-smoothing: grayscale;
-} */
