@@ -6,7 +6,8 @@ def login_two
   fill_in 'password', with: 'lisa'
   click_button 'Submit'
   click_button 'Log in'
-  fill_in 'email', with: 'yemiadebayo60@gmail.com'
-  fill_in 'password', with: 'hello'
+  fill_in 'email', with: 'lisa@email.com'
+  fill_in 'password', with: 'lisa'
   click_button 'Log in'
+  click_button 'Book'
 end

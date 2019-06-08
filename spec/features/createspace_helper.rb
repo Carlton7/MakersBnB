@@ -9,4 +9,5 @@ def createspace
   fill_in 'available_from', with: '04/07/2019'
   fill_in 'available_to', with: '31/07/2019'
   click_button 'List my space'
+  visit('/')
 end
